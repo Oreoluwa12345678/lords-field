@@ -1,0 +1,32 @@
+.cta {
+  background: #658eed;
+  background: linear-gradient(
+    90deg,
+    rgba(101, 142, 237, 1) 0%,
+    rgba(37, 95, 229, 1) 100%
+  );
+  width: 86.5%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  border-radius: 20px;
+  margin-bottom: 10rem;
+}
+
+.cta-title {
+  font-weight: 500;
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.cta-subtitle {
+  font-weight: 400;
+  font-size: 20px;
+  width: 60rem;
+}

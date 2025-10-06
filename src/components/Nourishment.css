@@ -1,0 +1,105 @@
+.nourishment {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 10rem;
+}
+
+.nourishment-title {
+  font-weight: 600;
+  font-size: 40px;
+}
+
+.nourishment-text {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px;
+}
+
+.nourishment-lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 40px;
+  margin-bottom: 40px;
+  width: 86.5%;
+}
+
+.nourishment-list {
+  width: 344px;
+  height: 428px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.nourishment-img {
+  width: 100%;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.nourishment-bottom {
+  background-color: white;
+  color: #000000;
+  padding: 20px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  border: 1px solid #ebebeb;
+  border-top: none;
+}
+
+.calender {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.calender p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #545252;
+}
+
+.nourishment-title1 {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.nourishment-bibletext {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.nourishment-bibletext p {
+  color: #545252;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nourishment-content {
+  color: #545252;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nourishment-btn {
+  background-color: #255fe5;
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+}
