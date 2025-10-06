@@ -8,7 +8,7 @@ interface Itips {
   content: string;
 }
 const Spiritual = () => {
-  const [list, setList] = useState<Itips[]>(tips);
+  const [list] = useState<Itips[]>(tips);
   return (
     <section className="spiritual">
       <p className="spiritual-heading">

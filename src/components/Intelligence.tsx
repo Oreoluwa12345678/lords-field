@@ -2,7 +2,7 @@ import { useState } from "react";
 import { intelligences } from "../info";
 import "./Intelligence.css";
 const Intelligence = () => {
-  const [list, setList] = useState(intelligences);
+  const [list] = useState(intelligences);
   const color1 = {
     color: "#b752e2",
   };

@@ -3,7 +3,7 @@ import { stores } from "../info";
 import "./Store.css";
 
 const Store = () => {
-  const [store, setStore] = useState(stores);
+  const [store] = useState(stores);
   return (
     <section className="store">
       <h3 className="store-title">Christian Resources Store</h3>
