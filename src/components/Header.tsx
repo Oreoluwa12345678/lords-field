@@ -40,7 +40,7 @@ const Header = () => {
         </li>
       </ul>
 
-      <button className="border-0 bg-[#255fe5] text-white text-[14px] font-semibold p-[16px] rounded-[8px] hidden md:block">
+      <button className="border-0 bg-[#255fe5] text-white text-[14px] font-semibold p-[16px] rounded-[8px] hidden md:block cursor-pointer">
         Explore Bible Classes
       </button>
 
