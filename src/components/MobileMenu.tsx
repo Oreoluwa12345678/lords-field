@@ -1,0 +1,53 @@
+import logo from "../assets/images/logo.svg";
+import { MdKeyboardArrowRight } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
+
+interface MobileProps {
+  handleOpen: () => void;
+}
+const MobileMenu = ({ handleOpen }: MobileProps) => {
+  return (
+    <section className="bg-black/70 w-full h-full fixed inset-0 z-10">
+      <div className="bg-white h-full w-[80%] z-40 absolute right-0 flex flex-col justify-start items-start gap-[29px] p-6">
+        <div className="flex justify-between items-center w-full">
+          <div className="flex items-center justify-center gap-[9px]">
+            <img src={logo} alt="" className="w-[40px] h-[40px]" />
+            <p className="text-[16px] font-semibold">Lord's Field</p>
+          </div>
+          <div className="text-[24px]" onClick={handleOpen}>
+            <IoClose />
+          </div>
+        </div>
+
+        <ul className="flex flex-col items-start justify-center list-none gap-5 w-full">
+          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
+            <p>Bible Intelligence</p>
+            <MdKeyboardArrowRight size={24} />
+          </li>
+          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
+            <p>Devotionals</p>
+            <MdKeyboardArrowRight size={24} />
+          </li>
+          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
+            <p>Streams</p>
+            <MdKeyboardArrowRight size={24} />
+          </li>
+          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
+            <p>About</p>
+            <MdKeyboardArrowRight size={24} />
+          </li>
+          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full ">
+            <p>Store</p>
+            <MdKeyboardArrowRight size={24} />
+          </li>
+        </ul>
+
+        <button className="border-0 bg-[#255fe5] text-white text-[14px] font-semibold p-[16px] rounded-[8px] w-full ">
+          Explore Bible Classes
+        </button>
+      </div>
+    </section>
+  );
+};
+
+export default MobileMenu;
