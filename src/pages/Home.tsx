@@ -11,13 +11,13 @@ const Home = () => {
   return (
     <div>
       <Header />
-      {/* <Hero />
+      <Hero />
       <Spiritual />
       <Intelligence />
       <Nourishment />
       <Store />
       <Cta />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 };
