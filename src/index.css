@@ -7,8 +7,23 @@
 
 @theme {
   --font-Manrope: "Manrope", sans-serif;
+  --color-gray: #EBEBEB;
+  --color-darkGray: #727272;
+  --color-lightBlack: #545252;
+  --color-black: #2A2A2A;
+  --color-black200: #e4e4e4;
+  --color-offWhite: #fafbfe;
+  --color-blue-700: #255FE5;
+  --color-blue-600: #4576E9;
+  --color-blue-500: #658EED;
+  --color-blue-400: #85A5F0;
+  --color-blue-300: #A5BDF4;
+  --color-blue-200: #C4D4F8;
+  --color-blue-100: #E4EBFC;
+  --color-lightPurple: #F8E9FF;
+  --color-purple: #B752E2;
   --breakpoint-xs: 320px;
-  --breakpoint-sm: 640px;
+  --breakpoint-sm: 570px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
   --breakpoint-xl: 1280px;

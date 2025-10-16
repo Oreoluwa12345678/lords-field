@@ -1,6 +1,7 @@
 import logo from "../assets/images/logo.svg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 interface MobileProps {
   handleOpen: () => void;
@@ -20,29 +21,39 @@ const MobileMenu = ({ handleOpen }: MobileProps) => {
         </div>
 
         <ul className="flex flex-col items-start justify-center list-none gap-5 w-full">
-          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
-            <p>Bible Intelligence</p>
-            <MdKeyboardArrowRight size={24} />
-          </li>
-          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
-            <p>Devotionals</p>
-            <MdKeyboardArrowRight size={24} />
-          </li>
-          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
-            <p>Streams</p>
-            <MdKeyboardArrowRight size={24} />
-          </li>
-          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-[#e4e4e4]">
-            <p>About</p>
-            <MdKeyboardArrowRight size={24} />
-          </li>
-          <li className="text-[14px] font-semibold text-[#727272] hover:text-[#2a2a2a] cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full ">
-            <p>Store</p>
-            <MdKeyboardArrowRight size={24} />
-          </li>
+          <Link to="/bibleintelligence" className="w-full">
+            <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-black200">
+              <p>Bible Intelligence</p>
+              <MdKeyboardArrowRight size={24} />
+            </li>
+          </Link>
+          <Link to="/devotionals" className="w-full">
+            <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-black200">
+              <p>Devotionals</p>
+              <MdKeyboardArrowRight size={24} />
+            </li>
+          </Link>
+          <Link to="/streams" className="w-full">
+            <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-black200">
+              <p>Streams</p>
+              <MdKeyboardArrowRight size={24} />
+            </li>
+          </Link>
+          <Link to="/about" className="w-full">
+            <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full pb-6 pt-2 border-b-2 border-b-black200">
+              <p>About</p>
+              <MdKeyboardArrowRight size={24} />
+            </li>
+          </Link>
+          <Link to="/store" className="w-full">
+            <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100 flex justify-between items-start w-full ">
+              <p>Store</p>
+              <MdKeyboardArrowRight size={24} />
+            </li>
+          </Link>
         </ul>
 
-        <button className="border-0 bg-[#255fe5] text-white text-[14px] font-semibold p-[16px] rounded-[8px] w-full ">
+        <button className="border-0 bg-blue-700 text-white text-[14px] font-semibold p-[16px] rounded-[8px] w-full ">
           Explore Bible Classes
         </button>
       </div>

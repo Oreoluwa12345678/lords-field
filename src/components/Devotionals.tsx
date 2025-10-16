@@ -1,20 +1,21 @@
-import { nourishment } from "../info";
-import Button from "./Button";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { devotionals } from "../info";
 
-const Nourishment = () => {
+const Devotionals = () => {
   return (
-    <section className="w-full flex justify-center items-center flex-col gap-[2px] mb-[3rem] ">
-      <h3 className="font-semibold text-[20px] sm:text-[40px] text-center mb-2">
-        Daily Spiritual Nourishment
-      </h3>
-      <p className="font-normal text-[16px] sm:text-[20px] leading-[26px] sm:leading-[34px] text-center w-[20rem] sm:w-full">
-        Start each day with God's Word through our inspiring devotionals
+    <section className="flex flex-col justify-center items-center mb-20 w-[86.5%] mx-auto">
+      <h1 className="text-center text-blue-700 text-[27px] sm:text-[32px] md:text-[40px] font-semibold mb-2">
+        Devotionals
+      </h1>
+      <p className="text-center text-black text-[18px] sm:text-[20px] font-normal leading-[30px] sm:leading-[34px] w-[25rem] sm:w-[32rem] md:w-[48rem]  mb-10">
+        Start your day with God's Word and find inspiration for your spiritual
+        journey
       </p>
-      <div className="flex flex-col md:flex-row justify-center items-center mt-[50px] gap-10 mb-10 w-[86.5%]">
-        {nourishment.map((item) => (
+      <div className="flex flex-wrap justify-center items-center mt-[20px] gap-12 w-full ">
+        {devotionals.map((item) => (
           <div
             key={item.id}
-            className="w-[344px] h-[428px] flex items-center justify-center flex-col"
+            className="w-[344px] h-[468px] flex items-center justify-center flex-col"
           >
             <img
               src={item.image}
@@ -37,16 +38,19 @@ const Nourishment = () => {
                   {item.bibletext.passage}
                 </p>
               </span>
-              <p className="text-[14px] font-normal text-lightBlack ">
+              <p className="text-[14px] font-normal text-lightBlack">
                 {item.content}
               </p>
+              <div className="flex justify-start items-center gap-4 mt-[10px]">
+                <p className="text-blue-700 text-sm font-normal">Read more</p>
+                <FaArrowRightLong color="#255fe5" size={24} />
+              </div>
             </div>
           </div>
         ))}
       </div>
-      <Button text="See All Devotionals" color="blue" />
     </section>
   );
 };
 
-export default Nourishment;
+export default Devotionals;
