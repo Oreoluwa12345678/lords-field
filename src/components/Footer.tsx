@@ -2,8 +2,8 @@ import logo from "../assets/images/logo.svg";
 import fb from "../assets/images/fb.svg";
 import x from "../assets/images/x.svg";
 import linkedln from "../assets/images/linkedln.svg";
-import "./footer.css";
 import { Link } from "react-router-dom";
+import "./Footer.css";
 
 const Footer = () => {
   return (
