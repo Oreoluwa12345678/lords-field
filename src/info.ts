@@ -388,6 +388,37 @@ const streams = [
   },
 ];
 
+const storespage = [
+  {
+    id: 1,
+    image: intelligenceImg,
+    tag: "Ebook",
+    status: "free",
+    title: "Daily Devotional Guide",
+    price: 4.99,
+    content:
+      "A 365-day journey through Scripture with daily readings, reflections, and prayers. Perfect for personal...",
+  },
+  {
+    id: 2,
+    image: intelligenceImg,
+    tag: "Ebook",
+    title: "Bible Study Methods Guide",
+    price: 4.99,
+    content:
+      "A 365-day journey through Scripture with daily readings, reflections, and prayers. Perfect for personal...",
+  },
+  {
+    id: 3,
+    image: intelligenceImg,
+    tag: "Ebook",
+    title: "Bible Study Methods Guide",
+    price: 4.99,
+    content:
+      "A 365-day journey through Scripture with daily readings, reflections, and prayers. Perfect for personal...",
+  },
+];
+
 export {
   tips,
   intelligences,
@@ -396,4 +427,5 @@ export {
   bibleIntelligences,
   devotionals,
   streams,
+  storespage,
 };
