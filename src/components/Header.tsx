@@ -2,55 +2,64 @@ import logo from "../assets/images/logo.svg";
 import { RiMenu3Fill } from "react-icons/ri";
 import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Button from "./Button";
 
 const Header = () => {
   const [width, setWidth] = useState<number>(window.innerWidth);
   const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState<string>("");
+  const location = useLocation();
+
+  const items = [
+    { name: "Bible Intelligence", path: "/bibleintelligence" },
+    { name: "Devotionals", path: "/devotionals" },
+    { name: "Streams", path: "/streams" },
+    { name: "About", path: "/about" },
+    { name: "Store", path: "/store" },
+  ];
+
   const handleOpen = () => {
     setOpen(!open);
   };
+
   useEffect(() => {
     const handleResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
-
     return () => window.removeEventListener("resize", handleResize);
-  });
+  }, []);
+
+  useEffect(() => {
+    const currentItem = items.find((item) => item.path === location.pathname);
+    if (currentItem) {
+      setSelected(currentItem.name);
+    }
+  }, [location.pathname]);
+
   return (
     <header className="w-[86.5%] h-[50px] flex items-center justify-between mx-auto mt-4 mb-12">
       <Link to="/">
         <div className="flex items-center justify-center gap-[9px] cursor-pointer">
-          <img src={logo} alt="" className="w-[40px] h-[40px]" />
+          <img src={logo} alt="logo" className="w-[40px] h-[40px]" />
           <p className="text-[16px] font-semibold">Lord's Field</p>
         </div>
       </Link>
+
       <ul className="hidden md:flex items-center justify-center list-none gap-10">
-        <Link to="/bibleintelligence">
-          <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100">
-            Bible Intelligence
-          </li>
-        </Link>
-        <Link to="/devotionals">
-          <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100">
-            Devotionals
-          </li>
-        </Link>
-        <Link to="/streams">
-          <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100">
-            Streams
-          </li>
-        </Link>
-        <Link to="/about">
-          <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100">
-            About
-          </li>
-        </Link>
-        <Link to="/store">
-          <li className="text-[14px] font-semibold text-darkGray hover:text-black cursor-pointer transition-colors ease-in-out delay-100">
-            Store
-          </li>
-        </Link>
+        {items.map((item) => (
+          <Link to={item.path} key={item.name}>
+            <li
+              onClick={() => setSelected(item.name)}
+              className={`text-[14px] font-semibold cursor-pointer transition-colors ease-in-out duration-200 ${
+                selected === item.name
+                  ? "text-blue-700"
+                  : "text-darkGray hover:text-black"
+              }`}
+            >
+              {item.name}
+            </li>
+          </Link>
+        ))}
       </ul>
 
       <Button
